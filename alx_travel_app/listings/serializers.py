@@ -13,3 +13,9 @@ class BookingSerializer(serializers.ModelSerializer):
         model = Booking
         fields = '__all__'
 
+class BookingSerializer(serializers.ModelSerializer):
+    listing = ListingSerializer(read_only=True)
+
+    class Meta:
+        model = Booking
+        fields = '__all__'
